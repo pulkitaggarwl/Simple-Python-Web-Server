@@ -18,10 +18,10 @@ jobs:
     - uses: actions/checkout@master
 
     # setup python
-    - name: Setup Python 3.7
+    - name: Setup Python 3.6
       uses: actions/setup-python@v1
       with:
-        python-version: 3.7
+        python-version: 3.6
 
     # install dependencies
     - name: python install
@@ -41,7 +41,7 @@ jobs:
     - uses: azure/appservice-settings@v1
       with:
         app-name: aatiwarishub-python-linux
-        general-settings-json: '{"linuxFxVersion": "PYTHON|3.7"}' #'General configuration settings as Key Value pairs'
+        general-settings-json: '{"linuxFxVersion": "PYTHON|3.6"}' #'General configuration settings as Key Value pairs'
 
     # deploy web app
     - uses: azure/webapps-deploy@v1
